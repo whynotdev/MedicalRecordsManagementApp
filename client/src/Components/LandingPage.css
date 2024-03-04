@@ -4,6 +4,13 @@
   height: 100vh;
   overflow: hidden;
 }
+body{
+  background-image: url("https://images.pexels.com/photos/3312671/pexels-photo-3312671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+
+ background-repeat: none;
+ background-position: cover;
+ width: 100vw;
+}
 
 /* .Landing{
   height: 100vh;
@@ -32,7 +39,12 @@ h1 {
 }
 
 .btn {
-  margin-right:10px;
-  width: 200px; /* Adjust width as needed */
-  border-radius: 25px; /* Add border radius */
+  margin: 10px;
+  width: 200px;
+  border-radius: 25px; 
+}
+.btn-group{
+  
+  width: 350px;
+  border-radius: 25px; 
 }

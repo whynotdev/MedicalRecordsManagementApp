@@ -1,3 +1,13 @@
+/* Import the base styles from Tailwind */
+@import 'tailwindcss/base';
+
+/* Import the component styles from Tailwind */
+@import 'tailwindcss/components';
+
+/* Import your custom styles or additional third-party styles here */
+
+/* Import the utilities styles from Tailwind */
+@import 'tailwindcss/utilities';
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

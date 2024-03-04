@@ -5,15 +5,16 @@ import "./LandingPage.css";
 
 const LandingPage = () => {
   // const backgroundImage = {
-  //   backgroundImage: 'url("https://wallpaperset.com/w/full/1/d/a/221583.jpg")',
-  //   backgroundSize: "cover",
-  //   backgroundPosition: "center",
-  //   backgroundRepeat: "no-repeat",
+  
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: none;
   // };
+  
   // style={backgroundImage}
   return (
    
-    <div className="landing-page-container" >
+    <div className="landing-page-container"   >
       <div className="text-center mt-5 landing-page-content">
         <div className="container">
           <div className="row">

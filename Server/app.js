@@ -1,14 +1,17 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const { dbConnection } = require("./Config/DbConnection");
+const { dbConnection, databaseConnection } = require("./Config/DbConnection");
 const { userRouter } = require("./route/route");
+const dotenv = require("dotenv");
+app.use(express.json());
+app.use(cors());
 
-app.use(express.json())
-app.use(cors())
+const path = require("path");
 
+dotenv.config({ path: path.join(__dirname, "config", "config.env") });
 
-dbConnection()
+databaseConnection();
 
 // const stud ={
 //   Name:"Arif",
@@ -19,8 +22,8 @@ dbConnection()
 //   res.send([stud])
 // })
 
-app.use('/api/reg',userRouter)
+app.use("/api/reg", userRouter);
 
-app.listen(8000,()=>{
-  console.log('server is listening in port: 8000')
-})
+app.listen(process.env.PORT, () => {
+  console.log("server is listening in port: 8000");
+});

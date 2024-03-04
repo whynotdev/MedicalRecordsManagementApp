@@ -1,10 +1,9 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-const dbConnection = ()=>{}
+const databaseConnection = () => {
+  mongoose.connect(process.env.MONGO_URL_CON).then(() => {
+    console.log("Mongo db is connected successfully");
+  });
+};
 
- mongoose.connect("mongodb://localhost:27017/MedicalRecords").then(()=>{
-    console.log("Database Connected")
- })
-
-//Exporting Module
- module.exports = {dbConnection} 
+module.exports = { databaseConnection };
