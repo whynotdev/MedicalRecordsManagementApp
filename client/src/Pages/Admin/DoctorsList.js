@@ -13,14 +13,14 @@ function DoctorsList() {
   const getDoctorsData = async () => {
     try {
       dispatch(showLoading());
-      const resposne = await axios.get("/api/admin/get-all-doctors", {
+      const response = await axios.get("/api/admin/get-all-doctors", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
       dispatch(hideLoading());
-      if (resposne.data.success) {
-        setDoctors(resposne.data.data);
+      if (response.data.success) {
+        setDoctors(response.data.data);
       }
     } catch (error) {
       dispatch(hideLoading());
@@ -30,7 +30,7 @@ function DoctorsList() {
   const changeDoctorStatus = async (record, status) => {
     try {
       dispatch(showLoading());
-      const resposne = await axios.post(
+      const response = await axios.post(
         "/api/admin/change-doctor-account-status",
         { doctorId: record._id, userId: record.userId, status: status },
         {
@@ -40,8 +40,8 @@ function DoctorsList() {
         }
       );
       dispatch(hideLoading());
-      if (resposne.data.success) {
-        toast.success(resposne.data.message);
+      if (response.data.success) {
+        toast.success(response.data.message);
         getDoctorsData();
       }
     } catch (error) {

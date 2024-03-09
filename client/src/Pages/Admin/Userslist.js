@@ -6,20 +6,20 @@ import axios from "axios";
 import { Table } from "antd";
 import moment from "moment";
 
-function Userslist() {
+function UsersList() {
   const [users, setUsers] = useState([]);
   const dispatch = useDispatch();
   const getUsersData = async () => {
     try {
       dispatch(showLoading());
-      const resposne = await axios.get("/api/admin/get-all-users", {
+      const response = await axios.get("/api/admin/get-all-users", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
       dispatch(hideLoading());
-      if (resposne.data.success) {
-        setUsers(resposne.data.data);
+      if (response.data.success) {
+        setUsers(response.data.data);
       }
     } catch (error) {
       dispatch(hideLoading());
@@ -64,4 +64,4 @@ function Userslist() {
   );
 }
 
-export default Userslist;
+export default UsersList;
