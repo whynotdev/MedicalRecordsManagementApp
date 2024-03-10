@@ -40,10 +40,17 @@ function Layout({ children }) {
       icon: "ri-file-list-line",
     },
     {
+      name: "Patients Record",
+      path: "/patients/record",
+      icon: "ri-user-line",
+    },
+    {
       name: "Profile",
       path: `/doctor/profile/${user?._id}`,
       icon: "ri-user-line",
     },
+
+    
   ];
 
   const adminMenu = [
