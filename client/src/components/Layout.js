@@ -40,7 +40,7 @@ function Layout({ children }) {
       icon: "ri-file-list-line",
     },
     {
-      name: "Patients Record",
+      name: "Patients",
       path: "/patients/record",
       icon: "ri-user-line",
     },
