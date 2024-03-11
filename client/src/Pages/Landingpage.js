@@ -13,7 +13,7 @@ function Landingpage() {
   return (
     <>
       {/* Landing Page Content */}
-      <div className="container mt-5 text-center ">
+      <div className="container mt-5 text-center bg-landing">
         <div className="row ">
           <div className="hero1 col-lg-12 text-light">
             <div className="row">
@@ -28,23 +28,22 @@ function Landingpage() {
                   Your trusted platform for managing medical information.
                 </p>
                 <Link to="/login" class="cssbuttons-io-button">
-  Get started
-  <div class="icon">
-    <svg
-      height="24"
-      width="24"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path
-        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-        fill="currentColor"
-      ></path>
-    </svg>
-  </div>
-</Link>
-
+                  Get started
+                  <div class="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </Link>
 
                 <a class=" "></a>
               </div>
@@ -55,7 +54,10 @@ function Landingpage() {
             <div className="mt-5 row d-flex flex-row container-fluid">
               <div className="col-lg-1"></div>
               <div className="col-lg-5 col-md-6  col-sm-12 my-5">
-                <img className="container-fluid" src={img} />
+                <img
+                  className="container-fluid"
+                  src="https://medrec-m.com/public/design/images/heading-image-n.jpg"
+                />
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12 mt-5">
                 <h1 className="text-dark font-weight-bold">

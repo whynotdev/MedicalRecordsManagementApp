@@ -188,3 +188,7 @@ p{
 .cssbuttons-io-button:active .icon {
   transform: scale(0.95);
 }
+
+.bg-landing{
+ background-color: #a1f3c2; 
+}
