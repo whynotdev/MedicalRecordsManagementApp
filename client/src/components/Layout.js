@@ -22,10 +22,20 @@ function Layout({ children }) {
       icon: "ri-file-list-line",
     },
     {
+      name: "Health Track",
+      path: "/healthTracker",
+      icon: "ri-user-star-line",
+    },
+    {
+      name: "Manage your Record",
+      path: "/patientsRecordsUpload",
+      icon: "ri-hospital-line",
+    },
+    {
       name: "Apply Doctor",
       path: "/apply-doctor",
       icon: "ri-hospital-line",
-    }
+    },
   ];
 
   const doctorMenu = [
@@ -49,8 +59,6 @@ function Layout({ children }) {
       path: `/doctor/profile/${user?._id}`,
       icon: "ri-user-line",
     },
-
-    
   ];
 
   const adminMenu = [
@@ -69,21 +77,25 @@ function Layout({ children }) {
       path: "/admin/doctorslist",
       icon: "ri-user-star-line",
     },
-    {
-      name: "Profile",
-      path: "/profile",
-      icon: "ri-user-line",
-    },
+    // {
+    //   name: "Profile",
+    //   path: "/profile",
+    //   icon: "ri-user-line",
+    // },
   ];
 
-  const menuToBeRendered = user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu : userMenu;
+  const menuToBeRendered = user?.isAdmin
+    ? adminMenu
+    : user?.isDoctor
+    ? doctorMenu
+    : userMenu;
   const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : "User";
   return (
     <div className="main">
       <div className="d-flex layout">
         <div className="sidebar">
           <div className="sidebar-header">
-            <h1 className="logo">SH</h1>
+            <h1 className="logo">MED+</h1>
             <h1 className="role">{role}</h1>
           </div>
 
@@ -133,10 +145,13 @@ function Layout({ children }) {
                 count={user?.unseenNotifications.length}
                 onClick={() => navigate("/notifications")}
               >
-                <i className="ri-notification-line header-action-icon px-3"></i>
+                <i className="ri-notification-line header-action-icon px-3 "></i>
               </Badge>
 
-              <Link className="anchor mx-2" to="/profile">
+              <Link
+                className=" mx-2 text-light-layout"
+                to={`/doctor/profile/${user?._id}`}
+              >
                 {user?.name}
               </Link>
             </div>

@@ -85,7 +85,9 @@ p{
   padding: 0 !important;
   margin: 0 !important;
 }
-
+.text-light-layout{
+  color: white !important;
+}
 .anchor{
   color: black !important;
   text-decoration: underline;

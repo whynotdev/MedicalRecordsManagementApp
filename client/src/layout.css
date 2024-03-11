@@ -12,7 +12,7 @@
     margin-top:-20px ;
 }
 .sidebar{
-    background-color: #005555;
+    background-color: rgb(16, 15, 15);
     border-radius: 5px;
     box-shadow: 0 0 2px gray;
     margin-right: 20px;
@@ -24,18 +24,24 @@
     height: 100%;
  }
 .header{
-    background-color: white;
+    background-color:black;
     border-radius: 5px;
     box-shadow: 0 0 2px gray;
     margin-bottom: 20px;
-    height: 10vh;
+    height: 9vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .body{
-    background-color: white;
+    background-image: url("https://img.freepik.com/premium-vector/abstract-geometric-white-gray-color-background-vector-illustration-hexagon-geometric-shapes-banner-backdrop-wallpaper_473751-791.jpg?w=1480");
+   
+    background-repeat: none !important;
+    /* background-position: center; */
+    background-size: cover;
+    
+    background-color: rgb(237, 243, 246);
     border-radius: 5px;
     box-shadow: 0 0 2px gray;
     height: 82vh;
@@ -76,7 +82,7 @@
 
 .header-action-icon{
     font-size: 30px;
-    color: black !important;
+    color: rgb(237, 227, 227) !important;
     cursor: pointer;
     padding-left: 10px;
 }

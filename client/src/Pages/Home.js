@@ -10,18 +10,18 @@ function Home() {
   const dispatch = useDispatch();
   const getData = async () => {
     try {
-      dispatch(showLoading())
+      dispatch(showLoading());
       const response = await axios.get("/api/user/get-all-approved-doctors", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
       });
-      dispatch(hideLoading())
+      dispatch(hideLoading());
       if (response.data.success) {
         setDoctors(response.data.data);
       }
     } catch (error) {
-      dispatch(hideLoading())
+      dispatch(hideLoading());
     }
   };
 
@@ -32,7 +32,7 @@ function Home() {
     <Layout>
       <Row gutter={20}>
         {doctors.map((doctor) => (
-          <Col span={8} xs={24} sm={24} lg={8}>
+          <Col span={8} xs={24} sm={24} lg={6}>
             <Doctor doctor={doctor} />
           </Col>
         ))}

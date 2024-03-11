@@ -18,6 +18,8 @@ import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/Doctor/DoctorAppointments";
 import UsersList from "./pages/Admin/Userslist";
 import PatientsRecord from "./pages/Doctor/PatientsRecord";
+import HealthTracking from "./pages/Patient/HealthTracker";
+import PatientManageRecord from "./pages/Patient/PatientManageRecord";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -122,7 +124,23 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
+
+        <Route
+          path="/healthTracker"
+          element={
+            <ProtectedRoute>
+              <HealthTracking />
+            </ProtectedRoute>
+          }
+        />
+         <Route
+          path="/patientsRecordsUpload"
+          element={
+            <ProtectedRoute>
+              <PatientManageRecord />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/patients/record"
           element={

@@ -7,6 +7,10 @@ const jwt = require("jsonwebtoken");
 const authMiddleware = require("../middlewares/authMiddleware");
 const Appointment = require("../models/appointmentModel");
 const moment = require("moment");
+// const multer = require("multer")
+
+// const storage = multer.memoryStorage();
+// const upload = multer({ storage: storage });
 
 router.post("/register", async (req, res) => {
   try {
@@ -113,6 +117,7 @@ router.post("/apply-doctor-account", authMiddleware, async (req, res) => {
     });
   }
 });
+
 router.post(
   "/mark-all-notifications-as-seen",
   authMiddleware,
