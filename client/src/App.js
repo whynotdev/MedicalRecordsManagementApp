@@ -20,6 +20,7 @@ import UsersList from "./pages/Admin/Userslist";
 import PatientsRecord from "./pages/Doctor/PatientsRecord";
 import HealthTracking from "./pages/Patient/HealthTracker";
 import PatientManageRecord from "./pages/Patient/PatientManageRecord";
+import Landingpage from "./pages/Landingpage";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -45,6 +46,14 @@ function App() {
           element={
             <PublicRoute>
               <Register />
+            </PublicRoute>
+          }
+        />
+         <Route
+          path="/landing"
+          element={
+            <PublicRoute>
+              <Landingpage/>
             </PublicRoute>
           }
         />

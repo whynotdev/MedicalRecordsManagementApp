@@ -27,12 +27,12 @@ function ProtectedRoute(props) {
         dispatch(setUser(response.data.data));
       } else {
         localStorage.clear()
-        navigate("/login");
+        navigate("/landing");
       }
     } catch (error) {
       dispatch(hideLoading());
       localStorage.clear()
-      navigate("/login");
+      navigate("/landing");
     }
   };
 

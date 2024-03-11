@@ -76,6 +76,7 @@ label{
   color: white !important;
   font-size: 16px !important;
   width: max-content !important;
+  border-radius: 15px;
 }
 .full-width-button{
   width: 100% !important;
@@ -110,10 +111,12 @@ p{
    display: flex;
    align-items: center;
    justify-content: center;
-   background-color: #005555;
+   /* background-color: #005555; */
+   background-image: url("https://wallpapercave.com/wp/wp9764009.jpg");
 }
 .authentication-form{
   width: 400px;
+  border-radius: 15px !important;
 }
 
 .authentication .card-title{
@@ -125,4 +128,63 @@ p{
   padding: 7px 15px;
   margin-left: -40px;
   border-bottom-left-radius: 10px;
+}
+
+.carouselcl{
+  width: 80vw !important;
+  height: 50vh;
+}
+
+.cssbuttons-io-button {
+  background: #068238;
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #4da675;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #055f1a;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #0c7337;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
 }

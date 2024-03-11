@@ -1,6 +1,7 @@
-import { Button, Col, Form, Input, Row, TimePicker } from "antd";
+import { Button, Col, Form, Input, Row, TimePicker, Upload } from "antd";
 import moment from "moment";
 import React from "react";
+import { UploadOutlined } from "@ant-design/icons";
 
 function DoctorForm({ onFinish, initivalValues }) {
   return (
@@ -111,6 +112,23 @@ function DoctorForm({ onFinish, initivalValues }) {
             rules={[{ required: true }]}
           >
             <TimePicker.RangePicker format="HH:mm" />
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item
+            required
+            label="Profile"
+            name="timings"
+            rules={[{ required: true }]}
+          >
+            {" "}
+            <Upload
+              // action="https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188"
+              listType="picture"
+              maxCount={1}
+            >
+              <Button icon={<UploadOutlined />}>Upload (Max: 1)</Button>
+            </Upload>
           </Form.Item>
         </Col>
       </Row>
