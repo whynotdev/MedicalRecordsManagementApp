@@ -7,29 +7,27 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import img from "../assets/home.png";
 
 function Landingpage() {
   return (
     <>
-      {/* Landing Page Content */}
       <div className="container mt-5 text-center bg-landing">
-        <div className="row ">
+        <div className="row">
           <div className="hero1 col-lg-12 text-light">
             <div className="row">
               <div className="col-lg-2 col-sm-1"></div>
-              <div className="col-lg-5 col-xl-7 col-sm-12 col-md-12 smscreen  px-sm-3">
-                <span class="sp1 my-3">EDUCATION & SCHOOL</span>
-                <h1 className="h11 my-3 ">
-                  Welcome to Medical Records
+              <div className="col-lg-8 col-sm-10 col-md-10 mx-auto px-sm-3">
+                <span className="sp1 my-3">MEDICAL RECORD MANAGEMENT</span>
+                <h1 className="h11 my-3">
+                  Welcome to MED+
                   <br />
                 </h1>
-                <p class="p1 my-4">
-                  Your trusted platform for managing medical information.
+                <p className="p1 my-4">
+                  Your trusted platform for managing medical records.
                 </p>
-                <Link to="/login" class="cssbuttons-io-button">
+                <Link to="/login" className="cssbuttons-io-button">
                   Get started
-                  <div class="icon">
+                  <div className="icon">
                     <svg
                       height="24"
                       width="24"
@@ -44,52 +42,50 @@ function Landingpage() {
                     </svg>
                   </div>
                 </Link>
-
-                <a class=" "></a>
               </div>
-              <div className="col-lg-5 col-sm-1"></div>
+              <div className="col-lg-2 col-sm-1"></div>
             </div>
           </div>
           <div className=" row hero2 mb-5 ">
             <div className="mt-5 row d-flex flex-row container-fluid">
               <div className="col-lg-1"></div>
-              <div className="col-lg-5 col-md-6  col-sm-12 my-5">
+              <div className="col-lg-5 col-md-6 col-sm-12 my-5">
                 <img
-                  className="container-fluid"
+                  className="img-fluid"
                   src="https://medrec-m.com/public/design/images/heading-image-n.jpg"
+                  alt="Medical Records"
                 />
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12 mt-5">
                 <h1 className="text-dark font-weight-bold">
-                  A COMPHRENSHINIVE <br />
-                  TEACHING APPROACH
+                  Comprehensive Medical Record Management
                 </h1>
                 <p className="text-muted hero2Pages mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas felis <br /> felis, vulputate sit amet mauris et,
-                  semper aliquam ligula. Integer efficitur tellus <br /> metus,
-                  sed feugiat leo posuere ac. Morbi vitae tincidunt malesuada
-                  massa.
+                  MED+ provides a secure and efficient platform for managing
+                  comprehensive medical records. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit.
                 </p>
                 <p className="text-muted hero2Pages mt-4">
-                  Maecenas felis felis, vulputate sit amet mauris et, semper
-                  aliquam ligula. <br />
-                  Integer efficitur tellus metus, sed feugiat leo posuere ac.
-                  Morbi vitae tincidunt <br /> mi,et malesuada massa.
+                  Our system ensures the confidentiality and accessibility of
+                  patient information, making healthcare management streamlined
+                  and effective.
                 </p>
-                <a className="text-success hero2anchor mt-5">Learn More</a>
+                <Link
+                  to="#"
+                  className="text-success hero2anchor mt-5"
+                >
+                  Learn More
+                </Link>
               </div>
             </div>
           </div>
-
+          {/* maincontent */}
           <div className="">
             <div className="text-center row col-12">
-              <h1 className="text-dark font-weight-bold">PROGRAMS WE OFFER</h1>
+              <h1 className="text-dark font-weight-bold">WHAT WE SERVE</h1>
               <p className="text-muted hero2Pages">
-                Maecenas felis felis, vulputate sit amet mauris et, semper
-                aliquam ligula. Integer efficitur tellus <br />
-                metus, sed feugiat leo posuere ac. Morbi vitae tincidunt mi, et
-                malesuada massa.
+                Explore our diverse range of educational programs designed to
+                meet your needs.
               </p>
             </div>
             <div className="col-lg-12 row gap-4 d-flex flex-row">
@@ -97,36 +93,52 @@ function Landingpage() {
               <div className="col-lg-4 card hero3cd">
                 <div class="card mb-3 mt-3">
                   <img
-                    src="https://preview.colorlib.com/theme/universityedu/assets/img/gallery/blog1.jpg.webp"
+                    src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     class="card-img-top"
-                    alt="..."
+                    alt="Medical Record Management"
                   />
                   <div class="card-body">
-                    <a class="card-title hero3an">Faculty of Science </a>
+                    <h5 class="card-title hero3an">
+                      Medical Record Management System
+                    </h5>
                     <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Welcome to MED+, where we offer a state-of-the-art Medical
+                      Record Management System. Streamline healthcare processes,
+                      ensure data security, and provide optimal patient care
+                      with our innovative solutions.
                     </p>
-                    <a className="text-success hero2anchor">Learn More</a>
+                    <a
+                      className="text-success hero2anchor"
+                      href="#"
+                    >
+                      Learn More
+                    </a>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 card hero3cd">
                 <div class="card mb-3 mt-3">
                   <img
-                    src="https://preview.colorlib.com/theme/universityedu/assets/img/gallery/blog2.jpg.webp"
+                    src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     class="card-img-top"
-                    alt="..."
+                    alt="Health Informatics"
                   />
                   <div class="card-body">
-                    <a class="card-title hero3an">Faculty of Arts</a>
+                    <h5 class="card-title hero3an">
+                      Health Informatics Program
+                    </h5>
                     <p class="card-text">
-                      This is a wider card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
+                      Dive into the dynamic field of health informatics with our
+                      comprehensive program. Learn how to leverage technology to
+                      manage healthcare data, improve patient outcomes, and
+                      contribute to the evolution of healthcare systems.
                     </p>
-                    <a className="text-success hero2anchor">Learn More</a>
+                    <a
+                      className="text-success hero2anchor"
+                      href="#"
+                    >
+                      Learn More
+                    </a>
                   </div>
                 </div>
               </div>
@@ -134,90 +146,46 @@ function Landingpage() {
             </div>
           </div>
 
-          <div className="col-12 row d-flex flex-row mt-5 text-muted">
-            <div className="col-lg-4 text-center">
-              <div>
-                {" "}
-                <img
-                  class="container-fluid mb-3"
-                  src="https://preview.colorlib.com/theme/universityedu/assets/img/gallery/class-img1.jpg.webp"
-                />
-                <h3>
-                  This is one step ahed to real world <br />
-                  That's what make you strong
-                  <br />
-                  Out of comfort zone
-                </h3>
-              </div>
+          {/* footer */}
+          <div className="container mt-5 text-center">
+          <div className="row text-light mt-5 d-flex flex-row bg-ft ">
+            <div className="col-lg-2 col-md-1 col-8 mx-auto ">
+              <h1 className="logo">MED+</h1>
             </div>
-            <div className="col-lg-4 text-center">
-              <div>
-                {" "}
-                <img
-                  class="container-fluid mb-3"
-                  src="https://preview.colorlib.com/theme/universityedu/assets/img/gallery/class-img2.jpg.webp"
-                />
-                <h3>
-                  This is one step ahed to real world <br />
-                  That's what make you strong
-                  <br />
-                  Out of comfort zone
-                </h3>
-              </div>
-            </div>
-            <div className="col-lg-4 text-center">
-              <div>
-                {" "}
-                <img
-                  class="container-fluid mb-3"
-                  src="https://preview.colorlib.com/theme/universityedu/assets/img/gallery/class-img3.jpg.webp"
-                />
-                <h3>
-                  This is one step ahed to real world <br />
-                  That's what make you strong
-                  <br />
-                  Out of comfort zone
-                </h3>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div></div>
-          <div className="container-fluid row bg-dark text-light mt-5 gg d-flex flex-row lol1">
-            <div className="col-lg-2 col-md-1 col-8 ftimg">
-              <img
-                className="container-fluid"
-                src="https://preview.colorlib.com/theme/universityedu/assets/img/logo/logo.png.webp"
-                alt="Logo"
-              />
-            </div>
-            <div className="col-lg-2 col-md-3 col-6">
-              <h3>Resources</h3>
-              <ul className="rrr">
-                <li>FAQ</li>
-                <li>Submit Ticket</li>
-                <li>Contact Us</li>
+            <div className="col-lg-2 col-md-3 col-6 mt-md-0 mt-4 mx-auto">
+              <h3 className="text-light ft">Resources</h3>
+              <ul className="list-unstyled rrr">
+                <li className="ft">FAQ</li>
+                <li className="ft">Submit Ticket</li>
+                <li className="ft">Contact Us</li>
               </ul>
             </div>
-            <div className="col-lg-3 col-md-2">
-              <h3>Social Links</h3>
-              <ul className="newsletter-container rrr">
+            <div className="col-lg-4 col-md-3 col-6 mt-md-0 mt-4 mx-auto">
+              <h3 className="text-light ft">Social Links</h3>
+              <ul className="list-unstyled newsletter-container rrr d-flex flex-row">
                 <li className="social-icons">
                   <FontAwesomeIcon icon={faFacebook} className="social-icon" />
+                </li>
+                <li className="social-icons">
                   <FontAwesomeIcon icon={faInstagram} className="social-icon" />
+                </li>
+                <li className="social-icons">
                   <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
+                </li>
+                <li className="social-icons">
                   <FontAwesomeIcon icon={faYoutube} className="social-icon" />
                 </li>
               </ul>
             </div>
-            <div className="col-12 text-center mt-4 bg-dark lol2">
-              <hr />
-              <h5>
-                Copyright &copy;2023 All Rights Reserved. This Template is made
-                with love.
+            <div className="col-12 text-center mt-4 py-3">
+              <hr className="bg-light" />
+              <h5 className="text-white">
+                Copyright &copy;2023 All Rights Reserved.
               </h5>
             </div>
           </div>
+          </div>
+         
         </div>
       </div>
     </>

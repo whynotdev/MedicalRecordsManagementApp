@@ -102,8 +102,22 @@ p{
 .cursor-pointer{
   cursor: pointer;
 }
+.ft{
+  margin: 10px;
+  text-align: left;
+}
+.social-icons {
+  margin-top: 10px; 
+}
 
+.social-icon {
+ margin: 12px;
+ height: 22px;
 
+}
+.bg-ft{
+background-color: #4da675;
+}
 /* authentication pages */
 
 .authentication{
@@ -190,5 +204,5 @@ p{
 }
 
 .bg-landing{
- background-color: #a1f3c2; 
+ background-color: #f2f9f5; 
 }
