@@ -70,10 +70,7 @@ function Landingpage() {
                   patient information, making healthcare management streamlined
                   and effective.
                 </p>
-                <Link
-                  to="#"
-                  className="text-success hero2anchor mt-5"
-                >
+                <Link to="#" className="text-success hero2anchor mt-5">
                   Learn More
                 </Link>
               </div>
@@ -107,10 +104,7 @@ function Landingpage() {
                       ensure data security, and provide optimal patient care
                       with our innovative solutions.
                     </p>
-                    <a
-                      className="text-success hero2anchor"
-                      href="#"
-                    >
+                    <a className="text-success hero2anchor" href="#">
                       Learn More
                     </a>
                   </div>
@@ -133,10 +127,7 @@ function Landingpage() {
                       manage healthcare data, improve patient outcomes, and
                       contribute to the evolution of healthcare systems.
                     </p>
-                    <a
-                      className="text-success hero2anchor"
-                      href="#"
-                    >
+                    <a className="text-success hero2anchor" href="#">
                       Learn More
                     </a>
                   </div>
@@ -148,44 +139,83 @@ function Landingpage() {
 
           {/* footer */}
           <div className="container mt-5 text-center">
-          <div className="row text-light mt-5 d-flex flex-row bg-ft ">
-            <div className="col-lg-2 col-md-1 col-8 mx-auto ">
-              <h1 className="logo">MED+</h1>
-            </div>
-            <div className="col-lg-2 col-md-3 col-6 mt-md-0 mt-4 mx-auto">
-              <h3 className="text-light ft">Resources</h3>
-              <ul className="list-unstyled rrr">
-                <li className="ft">FAQ</li>
-                <li className="ft">Submit Ticket</li>
-                <li className="ft">Contact Us</li>
-              </ul>
-            </div>
-            <div className="col-lg-4 col-md-3 col-6 mt-md-0 mt-4 mx-auto">
-              <h3 className="text-light ft">Social Links</h3>
-              <ul className="list-unstyled newsletter-container rrr d-flex flex-row">
-                <li className="social-icons">
-                  <FontAwesomeIcon icon={faFacebook} className="social-icon" />
-                </li>
-                <li className="social-icons">
-                  <FontAwesomeIcon icon={faInstagram} className="social-icon" />
-                </li>
-                <li className="social-icons">
-                  <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
-                </li>
-                <li className="social-icons">
-                  <FontAwesomeIcon icon={faYoutube} className="social-icon" />
-                </li>
-              </ul>
-            </div>
-            <div className="col-12 text-center mt-4 py-3">
-              <hr className="bg-light" />
-              <h5 className="text-white">
-                Copyright &copy;2023 All Rights Reserved.
-              </h5>
+            <div className="row text-light mt-5 d-flex flex-row bg-ft ">
+              <div className="col-lg-2 col-md-1 col-8 mx-auto ">
+                <h1 className="logo">MED+</h1>
+              </div>
+              <div className="col-lg-2 col-md-3 col-6 mt-md-0 mt-4 mx-auto">
+                <h3 className="text-light ft">Quick Links</h3>
+                <ul className="list-unstyled rrr">
+                  <li className="ft">FAQ</li>
+                  <li className="ft">Submit Ticket</li>
+                  <li className="ft">Contact Us</li>
+                </ul>
+              </div>
+              <div className="col-lg-4 col-md-3 col-6 mt-md-0 mt-4 mx-auto">
+                <h3 className="text-light ft">Follow Us</h3>
+                <ul className="list-unstyled newsletter-container rrr d-flex flex-row">
+                  <li className="social-icons">
+                    <a
+                      className="text-light"
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faFacebook}
+                        className="social-icon"
+                      />
+                    </a>
+                  </li>
+                  <li className="social-icons">
+                    <a
+                      className="text-light"
+                      href="https://www.instagram.com/?hl=en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faInstagram}
+                        className="social-icon"
+                      />
+                    </a>
+                  </li>
+                  <li className="social-icons">
+                    <a
+                      className="text-light"
+                      href="https://www.linkedin.com/in/arif-afajal-395a80167/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faLinkedin}
+                        className="social-icon"
+                      />
+                    </a>
+                  </li>
+                  <li className="social-icons">
+                    <a
+                      className="text-light"
+                      href="https://youtu.be/t8a7XO7MuQE?si=TqUtHDDZNFWlx1zo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon
+                        icon={faYoutube}
+                        className="social-icon"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-12 text-center mt-4 py-3">
+                <hr className="bg-light" />
+                <h5 className="text-white">
+                  Copyright &copy;2024 All Rights Reserved.
+                </h5>
+              </div>
             </div>
           </div>
-          </div>
-         
         </div>
       </div>
     </>

@@ -29,7 +29,7 @@ function Login() {
 
   return (
     <div className="authentication">
-      <div className="authentication-form card p-3">
+      <div className="authentication-form card p-3 bg-landing">
         <h1 className="card-title">Welcome Back</h1>
         <Form layout="vertical" onFinish={onFinish}>
           <Form.Item label="Email" name="email">
@@ -39,15 +39,16 @@ function Login() {
             <Input placeholder="Password" type="password" />
           </Form.Item>
 
-          
-          <Button className="primary-button my-2 full-width-button" htmlType="submit">
+          <Button
+            className="primary-button my-2 full-width-button"
+            htmlType="submit"
+          >
             LOGIN
           </Button>
 
           <Link to="/register" className="anchor mt-2">
-            CLICK HERE TO REGISTER
+            Don't have an account? Register
           </Link>
-         
         </Form>
       </div>
     </div>
