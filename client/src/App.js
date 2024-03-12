@@ -21,6 +21,7 @@ import PatientsRecord from "./pages/Doctor/PatientsRecord";
 import HealthTracking from "./pages/Patient/HealthTracker";
 import PatientManageRecord from "./pages/Patient/PatientManageRecord";
 import Landingpage from "./pages/Landingpage";
+import { ContactPage } from "./pages/ContactPage";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -38,6 +39,14 @@ function App() {
           element={
             <PublicRoute>
               <Login />
+            </PublicRoute>
+          }
+        />
+          <Route
+          path="/contactUs"
+          element={
+            <PublicRoute>
+              <ContactPage/>
             </PublicRoute>
           }
         />
