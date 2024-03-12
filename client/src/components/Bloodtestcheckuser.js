@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import bookimg from "../assets/bloodtracker.png";
 const BloodPressureChecker = () => {
   const [systolic, setSystolic] = useState("");
   const [diastolic, setDiastolic] = useState("");
@@ -40,39 +40,61 @@ const BloodPressureChecker = () => {
   };
 
   return (
-    <div
-      className=" container card m-2 p-4 bg-landing"
-    >
-      <h1 className="page-title ">Blood Pressure Checker</h1>
-      <div>
-        <label className="mb-2">Systolic (Top number): </label>
-        <br></br>
-        <input
-          type="number"
-          value={systolic}
-          onChange={(e) => setSystolic(e.target.value)}
-        />
-      </div>
-      <div>
-        <label className="mb-1 mt-2">Diastolic (Bottom number): </label>
-        <br></br>
-        <input
-          className="mb-2"
-          type="number"
-          value={diastolic}
-          onChange={(e) => setDiastolic(e.target.value)}
-        />
-      </div>
-      <button onClick={handleCheck} className="primary-button">
-        Check Blood Pressure
-      </button>
-      <br />
-      {result && (
-        <div>
-          <h2 className="page-title">Result:</h2>
-          <p>{result}</p>
+    <div className="container card m-2 p-4">
+      <center>
+        <h1 className="page-title mb-4">BLOOD PRESSURE CHECKER</h1>
+
+        <div className="row">
+          {/* Left side with the image */}
+          <div className="col-md-6 mb-4">
+            <img
+              src={bookimg}
+              alt="Blood Pressure Checker"
+              className="img-fluid"
+            />
+          </div>
+
+          {/* Right side with input fields and button */}
+          <div className="col-md-6 mt-5">
+            <div className="mb-3">
+              <label className="mb-2">Systolic (Top number): </label>
+              <br />
+              <input
+                type="number"
+                placeholder=""
+                value={systolic}
+                onChange={(e) => setSystolic(e.target.value)}
+              />
+            </div>
+
+            <div className="mb-3">
+              <label className="mb-1 mt-2">Diastolic (Bottom number): </label>
+              <br />
+              <input
+                className="mb-2"
+                type="number"
+                value={diastolic}
+                onChange={(e) => setDiastolic(e.target.value)}
+              />
+            </div>
+
+            <center>
+              <button onClick={handleCheck} className="primary-button">
+                Check Blood Pressure
+              </button>
+            </center>
+
+            <br />
+
+            {result && (
+              <div>
+                <h2 className="page-title mt-4">Result:</h2>
+                <p>{result}</p>
+              </div>
+            )}
+          </div>
         </div>
-      )}
+      </center>
     </div>
   );
 };

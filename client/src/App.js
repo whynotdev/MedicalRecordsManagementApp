@@ -42,11 +42,11 @@ function App() {
             </PublicRoute>
           }
         />
-          <Route
+        <Route
           path="/contactUs"
           element={
             <PublicRoute>
-              <ContactPage/>
+              <ContactPage />
             </PublicRoute>
           }
         />
@@ -58,11 +58,11 @@ function App() {
             </PublicRoute>
           }
         />
-         <Route
+        <Route
           path="/landing"
           element={
             <PublicRoute>
-              <Landingpage/>
+              <Landingpage />
             </PublicRoute>
           }
         />
@@ -151,7 +151,7 @@ function App() {
             </ProtectedRoute>
           }
         />
-         <Route
+        <Route
           path="/patientsRecordsUpload"
           element={
             <ProtectedRoute>

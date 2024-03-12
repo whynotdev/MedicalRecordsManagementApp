@@ -126,7 +126,9 @@ background-color: #4da675;
    align-items: center;
    justify-content: center;
    /* background-color: #005555; */
-   background-image: url("https://wallpapercave.com/wp/wp9764009.jpg");
+   background-image: url("https://files.123freevectors.com/wp-content/original/131329-abstract-green-and-white-low-poly-background.jpg");
+   background-size: cover;
+   background-position: left;
 }
 .authentication-form{
   width: 400px;
@@ -136,7 +138,7 @@ background-color: #4da675;
 .authentication .card-title{
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: orangered;
+  background-color: rgb(12, 53, 9);
   color: white !important;
   max-width: max-content !important;
   padding: 7px 15px;

@@ -9,6 +9,8 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 import DoctorForm from "../components/DoctorForm";
 import moment from "moment";
 
+import bookimg from "../assets/book.png"
+
 function BookAppointment() {
   const [isAvailable, setIsAvailable] = useState(false);
   const navigate = useNavigate();
@@ -119,7 +121,7 @@ function BookAppointment() {
 
             <Col span={8} sm={24} xs={24} lg={8}>
               <img
-                src="https://thumbs.dreamstime.com/b/finger-press-book-now-button-booking-reservation-icon-online-149789867.jpg"
+                src={bookimg}
                 alt=""
                 width="100%"
                 height='400'
