@@ -6,7 +6,7 @@ function PatientManageRecord() {
     <>
       <Layout>
         <h1>
-          manging patients
+          manging patients lol
         </h1>
       </Layout>
     </>
