@@ -114,7 +114,7 @@ function DoctorForm({ onFinish, initivalValues }) {
             <TimePicker.RangePicker format="HH:mm" />
           </Form.Item>
         </Col>
-        <Col span={8} xs={24} sm={24} lg={8}>
+        {/* <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
             required
             label="Profile"
@@ -130,7 +130,7 @@ function DoctorForm({ onFinish, initivalValues }) {
               <Button icon={<UploadOutlined />}>Upload (Max: 1)</Button>
             </Upload>
           </Form.Item>
-        </Col>
+        </Col> */}
       </Row>
 
       <div className="d-flex justify-content-end">

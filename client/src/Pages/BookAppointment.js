@@ -9,7 +9,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 import DoctorForm from "../components/DoctorForm";
 import moment from "moment";
 
-import bookimg from "../assets/book.png"
+import bookimg from "../assets/book.png";
 
 function BookAppointment() {
   const [isAvailable, setIsAvailable] = useState(false);
@@ -96,9 +96,8 @@ function BookAppointment() {
 
       dispatch(hideLoading());
       if (response.data.success) {
-        
         toast.success(response.data.message);
-        navigate('/appointments')
+        navigate("/appointments");
       }
     } catch (error) {
       toast.error("Error booking appointment");
@@ -117,15 +116,9 @@ function BookAppointment() {
             {doctor.firstName} {doctor.lastName}
           </h1>
           <hr />
-          <Row gutter={20} className="mt-5" align="middle">
-
+          <Row gutter={30} className="mt-5" align="middle">
             <Col span={8} sm={24} xs={24} lg={8}>
-              <img
-                src={bookimg}
-                alt=""
-                width="100%"
-                height='400'
-              />
+              <img src={bookimg} alt="" width="100%" height="300" />
             </Col>
             <Col span={8} sm={24} xs={24} lg={8}>
               <h1 className="normal-text">
@@ -163,12 +156,14 @@ function BookAppointment() {
                     setTime(moment(value).format("HH:mm"));
                   }}
                 />
-              {!isAvailable &&   <Button
-                  className="primary-button mt-3 full-width-button"
-                  onClick={checkAvailability}
-                >
-                  Check Availability
-                </Button>}
+                {!isAvailable && (
+                  <Button
+                    className="primary-button mt-3 full-width-button"
+                    onClick={checkAvailability}
+                  >
+                    Check Availability
+                  </Button>
+                )}
 
                 {isAvailable && (
                   <Button
@@ -180,7 +175,6 @@ function BookAppointment() {
                 )}
               </div>
             </Col>
-           
           </Row>
         </div>
       )}

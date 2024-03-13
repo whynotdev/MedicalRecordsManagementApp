@@ -26,11 +26,11 @@ function Layout({ children }) {
       path: "/healthTracker",
       icon: "ri-user-star-line",
     },
-    {
-      name: "Manage your Record",
-      path: "/patientsRecordsUpload",
-      icon: "ri-hospital-line",
-    },
+    // {
+    //   name: "Manage your Record",
+    //   path: "/patientsRecordsUpload",
+    //   icon: "ri-hospital-line",
+    // },
     {
       name: "Apply Doctor",
       path: "/apply-doctor",
