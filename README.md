@@ -19,6 +19,18 @@ Separate Menu for User and Admin the implementation of separate menus for users 
 Apply Doctor – UI :>
 This refers to the user interface (UI) development for the "Apply Doctor" feature. It indicates implementing the UI for applying as a doctor.
 
+Display All Doctors :> Displaying a list of all doctors
+Apply Doctor – UI 
+Notifications 
+Doctors List
+Users List
+Admin Actions
+Update Doctor Profile
+Booking Screen UI
+Availability Check :>checking the availability of doctors for appointments. It might involve querying the database or external services to determine the available time slots.
+User Appointments :>managing user appointments, such as displaying upcoming or past appointments for a specific user
+Doctor Appointments
+
 Tech Stack:
 ReactJS
 MongoDB
