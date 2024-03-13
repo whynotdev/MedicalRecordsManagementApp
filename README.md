@@ -16,6 +16,9 @@ Layout Collapsed the implementation of a collapsed layout feature, where the men
 
 Separate Menu for User and Admin the implementation of separate menus for users and administrators in the application. It may cover techniques for conditionally rendering different menu options based on user roles or permissions.
 
+Apply Doctor – UI :>
+This refers to the user interface (UI) development for the "Apply Doctor" feature. It indicates implementing the UI for applying as a doctor.
+
 Tech Stack:
 ReactJS
 MongoDB
