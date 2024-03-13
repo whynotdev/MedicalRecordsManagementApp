@@ -8,3 +8,11 @@ The registration functionality on the backend, handling incoming requests, and v
 
 User Login :>
 Implementing the user login functionality. It demonstrates the server-side and client-side processes involved in authenticating users.covers generating and verifying JSON Web Tokens (JWT) for user authentication and authorization. It also shows how to handle login requests and manage user sessions on the server-side.
+
+Tech Stack:
+ReactJS
+MongoDB
+NodeJS
+Expressjs
+Bootstrap
+Antd Design
