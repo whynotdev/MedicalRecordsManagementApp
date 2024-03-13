@@ -3,6 +3,8 @@
 ![Screenshot 2024-03-13 121721](https://github.com/whynotdev/MedicalRecordsManagementApp/assets/115531149/7a8ef28a-c466-44cf-bd3f-b6af86968649)
 ![Screenshot 2024-03-12 213222](https://github.com/whynotdev/MedicalRecordsManagementApp/assets/115531149/3056a463-e76f-456f-b3a7-9b01e262207f)
 ![Screenshot 2024-03-13 122023](https://github.com/whynotdev/MedicalRecordsManagementApp/assets/115531149/d89f377a-7133-46d6-8fca-8317485e3270)
+![Screenshot 2024-03-13 123708](https://github.com/whynotdev/MedicalRecordsManagementApp/assets/115531149/d09c431b-c3e3-49c8-9778-c4f2a537c9df)
+
 
 
                                        Medical Records Mangement System
