@@ -1,4 +1,6 @@
 ![Screenshot 2024-03-12 213031](https://github.com/whynotdev/MedicalRecordsManagementApp/assets/115531149/2d6cf7d4-33fa-40c2-8ed2-880685510884)
+![Screenshot 2024-03-12 213222](https://github.com/whynotdev/MedicalRecordsManagementApp/assets/115531149/3056a463-e76f-456f-b3a7-9b01e262207f)
+
                                        Medical Records Mangement System
 
 High-performance MERN stack web application for Medical Records Management System.
