@@ -6,8 +6,7 @@ function PatientManageRecord() {
     <>
       <Layout>
         <h1>
-          manging patients record like i have to create upload from for and all
-          the operation like create and update and delete
+          manging patients
         </h1>
       </Layout>
     </>
