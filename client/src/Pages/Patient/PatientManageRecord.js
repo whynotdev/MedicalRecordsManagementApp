@@ -5,9 +5,7 @@ function PatientManageRecord() {
   return (
     <>
       <Layout>
-        <h1>
-          manging patients lol
-        </h1>
+        <h1 className="page-title">Creating patients Record</h1>
       </Layout>
     </>
   );
