@@ -5,10 +5,10 @@ function BloodTest() {
     <>
       <div>
         <h1 className="page-title">HealthTracking</h1>
-        <hr/>
+        <hr />
         {/* Overview */}
         <div>
-          <h1 className="page-title">Overviews</h1>
+          <h1 className="page-title">Overview</h1>
           <p>
             A blood pressure test measures the pressure in the arteries as the
             heart pumps. It may be done as part of a routine health checkup or
@@ -48,7 +48,7 @@ function BloodTest() {
             </li>
           </ul>
         </div>
-        <hr/>
+        <hr />
 
         {/* How you prepare */}
         <div>
@@ -75,7 +75,7 @@ function BloodTest() {
             </li>
           </ul>
         </div>
-        <hr/>
+        <hr />
 
         {/* After the Procedure */}
         <div>
@@ -87,7 +87,7 @@ function BloodTest() {
             moment to moment and day to day.
           </p>
         </div>
-        <hr/>
+        <hr />
 
         {/* Results */}
         <div>
@@ -111,7 +111,7 @@ function BloodTest() {
             </li>
           </ul>
         </div>
-        <hr/>
+        <hr />
 
         {/* Blood Pressure Categories */}
         <div>
@@ -159,7 +159,7 @@ function BloodTest() {
             </tbody>
           </table>
         </div>
-        <hr/>
+        <hr />
 
         {/* Lifestyle Changes */}
         <div>
@@ -204,7 +204,7 @@ function BloodTest() {
             </li>
           </ul>
         </div>
-        <hr/>
+        <hr />
 
         {/* Medication */}
         <div>
@@ -215,7 +215,7 @@ function BloodTest() {
             and your provider can discuss the best treatment options for you.
           </p>
         </div>
-        <hr/>
+        <hr />
       </div>
     </>
   );

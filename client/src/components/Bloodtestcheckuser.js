@@ -6,11 +6,11 @@ const BloodPressureChecker = () => {
   const [result, setResult] = useState("");
 
   const handleCheck = () => {
-    // Convert input values to numbers
+  
     const systolicValue = parseInt(systolic, 10);
     const diastolicValue = parseInt(diastolic, 10);
 
-    // Check blood pressure category
+  
     if (systolicValue < 120 && diastolicValue < 80) {
       setResult(
         "Normal blood pressure. Maintain or adopt a healthy lifestyle."
@@ -45,7 +45,7 @@ const BloodPressureChecker = () => {
         <h1 className="page-title mb-4">BLOOD PRESSURE CHECKER</h1>
 
         <div className="row">
-          {/* Left side with the image */}
+        
           <div className="col-md-6 mb-4">
             <img
               src={bookimg}
@@ -54,7 +54,7 @@ const BloodPressureChecker = () => {
             />
           </div>
 
-          {/* Right side with input fields and button */}
+        
           <div className="col-md-6 mt-5">
             <div className="mb-3">
               <label className="mb-2">Systolic (Top number): </label>
