@@ -4,11 +4,11 @@ function BloodTest() {
   return (
     <>
       <div>
-        <h1 className="page-title">HealthTrackings</h1>
+        <h1 className="page-title">HealthTracking</h1>
         <hr/>
         {/* Overview */}
         <div>
-          <h1 className="page-title">Overview</h1>
+          <h1 className="page-title">Overviews</h1>
           <p>
             A blood pressure test measures the pressure in the arteries as the
             heart pumps. It may be done as part of a routine health checkup or
