@@ -4,7 +4,7 @@ function BloodTest() {
   return (
     <>
       <div>
-        <h1 className="page-title">HealthTracking</h1>
+        <h1 className="page-title">HealthTrackings</h1>
         <hr/>
         {/* Overview */}
         <div>
