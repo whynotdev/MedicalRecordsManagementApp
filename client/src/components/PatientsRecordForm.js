@@ -3,7 +3,7 @@ import moment from "moment";
 import React from "react";
 import { UploadOutlined } from "@ant-design/icons";
 
-function PatientsFrom({ onFinish, initivalValues }) {
+function PatientsForm({ onFinish, initivalValues }) {
   return (
     <Form
       layout="vertical"
@@ -140,4 +140,4 @@ function PatientsFrom({ onFinish, initivalValues }) {
   );
 }
 
-export default PatientsFrom;
+export default PatientsForm;
