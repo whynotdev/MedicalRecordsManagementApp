@@ -3,17 +3,17 @@ import moment from "moment";
 import React from "react";
 import { UploadOutlined } from "@ant-design/icons";
 
-function PatientsForm({ onFinish, initivalValues }) {
+function PatientsForm({ onFinish, initialValues }) {
   return (
     <Form
       layout="vertical"
       onFinish={onFinish}
       initialValues={{
-        ...initivalValues,
-        ...(initivalValues && {
+        ...initialValues,
+        ...(initialValues && {
           timings: [
-            moment(initivalValues?.timings[0], "HH:mm"),
-            moment(initivalValues?.timings[1], "HH:mm"),
+            moment(initialValues?.timings[0], "HH:mm"),
+            moment(initialValues?.timings[1], "HH:mm"),
           ],
         }),
       }}
@@ -50,7 +50,6 @@ function PatientsForm({ onFinish, initivalValues }) {
             <Input placeholder="Phone Number" />
           </Form.Item>
         </Col>
-      
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
             required
@@ -62,15 +61,53 @@ function PatientsForm({ onFinish, initivalValues }) {
           </Form.Item>
         </Col>
       </Row>
-      {/* gender */}
-      {/* age */}
-       {/* patient appoint id */}
+
+      {/* Gender */}
+      {/* <Row gutter={20}>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item
+            required
+            label="Gender"
+            name="gender"
+            rules={[{ required: true }]}
+          >
+            <Input placeholder="Gender" />
+          </Form.Item>
+        </Col>
+      </Row> */}
+
+      {/* Age */}
+      {/* <Row gutter={20}>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item
+            required
+            label="Age"
+            name="age"
+            rules={[{ required: true }]}
+          >
+            <Input placeholder="Age" type="number" />
+          </Form.Item>
+        </Col>
+      </Row> */}
+
+      {/* Patient Appointment ID */}
+      {/* <Row gutter={20}>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item
+            required
+            label="Patient Appointment ID"
+            name="appointmentId"
+            rules={[{ required: true }]}
+          >
+            <Input placeholder="Appointment ID" />
+          </Form.Item>
+        </Col>
+      </Row> */}
 
       <hr />
       <h1 className="card-title mt-3">Medical History</h1>
-      {/* doctorname */}
-      {/* blood group */}
-      
+      {/* Doctor Name */}
+      {/* Blood Group */}
       <Row gutter={20}>
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
@@ -95,11 +132,11 @@ function PatientsForm({ onFinish, initivalValues }) {
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
             required
-            label="Fee Per Cunsultation"
-            name="feePerCunsultation"
+            label="Fee Per Consultation"
+            name="feePerConsultation"
             rules={[{ required: true }]}
           >
-            <Input placeholder="Fee Per Cunsultation" type="number" />
+            <Input placeholder="Fee Per Consultation" type="number" />
           </Form.Item>
         </Col>
         <Col span={8} xs={24} sm={24} lg={8}>
@@ -112,24 +149,26 @@ function PatientsForm({ onFinish, initivalValues }) {
             <TimePicker.RangePicker format="HH:mm" />
           </Form.Item>
         </Col>
-        {/* <Col span={8} xs={24} sm={24} lg={8}>
+      </Row>
+
+      {/* Profile Picture Upload */}
+      {/* <Row gutter={20}>
+        <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
             required
-            label="Profile"
-            name="timings"
+            label="Profile Picture"
+            name="profilePicture"
             rules={[{ required: true }]}
           >
-            {" "}
             <Upload
-              // action="https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188"
               listType="picture"
               maxCount={1}
             >
               <Button icon={<UploadOutlined />}>Upload (Max: 1)</Button>
             </Upload>
           </Form.Item>
-        </Col> */}
-      </Row>
+        </Col>
+      </Row> */}
 
       <div className="d-flex justify-content-end">
         <Button className="primary-button" htmlType="submit">
