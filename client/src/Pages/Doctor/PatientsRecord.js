@@ -7,7 +7,6 @@ const PatientsRecord = () => {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-    // Handle form submission here
     console.log("Form values:", values);
   };
 
@@ -15,7 +14,7 @@ const PatientsRecord = () => {
     <Layout>
       <h1 className="page-header">Patient Record Creation</h1>
       <hr />
-      <PatientsForm/>
+      <PatientsForm onFinish={onFinish} />
     </Layout>
   );
 };
