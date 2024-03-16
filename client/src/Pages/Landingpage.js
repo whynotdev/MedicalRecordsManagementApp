@@ -99,9 +99,9 @@ function Landingpage() {
                       ensure data security, and provide optimal patient care
                       with our innovative solutions.
                     </p>
-                    <a className="text-success hero2anchor" href="#">
+                    <Link className="text-success hero2anchor" to={"/"} >
                       Learn More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -122,9 +122,9 @@ function Landingpage() {
                       manage healthcare data, improve patient outcomes, and
                       contribute to the evolution of healthcare systems.
                     </p>
-                    <a className="text-success hero2anchor" href="#">
+                    <Link className="text-success hero2anchor" to={"/"}>
                       Learn More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

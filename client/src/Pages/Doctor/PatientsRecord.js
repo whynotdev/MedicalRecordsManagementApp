@@ -1,5 +1,4 @@
 import React from "react";
-import { Col, Row, Form, Input, Button } from "antd";
 import Layout from "../../components/Layout";
 import PatientsForm from "../../components/PatientsRecordForm";
 import axios from "axios";

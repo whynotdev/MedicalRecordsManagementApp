@@ -5,8 +5,6 @@ import {
   Input,
   Row,
   Select,
-  TimePicker,
-  Upload,
 } from "antd";
 import { Option } from "antd/lib/mentions";
 import moment from "moment";
