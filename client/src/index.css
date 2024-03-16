@@ -30,6 +30,16 @@ label{
   border: 1px solid rgba(128, 128, 128, 0.521) !important;
   height: 40px !important;
 }
+.ant-select-selector, .textarea{
+  border-radius: 8px !important;
+  border: 1px solid rgba(128, 128, 128, 0.521) !important;
+  height: 40px !important;
+}
+.ant-form-item-control-input-content{}
+
+
+
+
 /* Common styling */
 
 .spinner-parent{

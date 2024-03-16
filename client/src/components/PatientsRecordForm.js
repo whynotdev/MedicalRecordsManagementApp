@@ -1,4 +1,14 @@
-import { Button, Col, Form, Input, Row, TimePicker, Upload } from "antd";
+import {
+  Button,
+  Col,
+  Form,
+  Input,
+  Row,
+  Select,
+  TimePicker,
+  Upload,
+} from "antd";
+import { Option } from "antd/lib/mentions";
 import moment from "moment";
 import React from "react";
 // import { UploadOutlined } from "@ant-design/icons";
@@ -81,86 +91,118 @@ function PatientsForm({ onFinish, initialValues }) {
           </Form.Item>
         </Col>
       </Row>
-      {/* Patient Appointment ID */}
-      {/* <Row gutter={20}>
-        <Col span={8} xs={24} sm={24} lg={8}>
-          <Form.Item
-            required
-            label="Patient Appointment ID"
-            name="appointmentId"
-            rules={[{ required: true }]}
-          >
-            <Input placeholder="Appointment ID" />
-          </Form.Item>
-        </Col>
-      </Row> */}
-
       <hr />
       <h1 className="card-title mt-3">Medical History</h1>
-      {/* Doctor Name */}
-      {/* Blood Group */}
+
       <Row gutter={20}>
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
             required
-            label="Specialization"
-            name="specialization"
-            rules={[{ required: true }]}
+            label="Doctor Name"
+            name="doctorName"
+            rules={[{ required: true, message: "Please enter doctor's name" }]}
           >
-            <Input placeholder="Specialization" />
+            <Input placeholder="Doctor Name" />
           </Form.Item>
         </Col>
         <Col span={8} xs={24} sm={24} lg={8}>
-          <Form.Item
-            required
-            label="Experience"
-            name="experience"
-            rules={[{ required: true }]}
-          >
-            <Input placeholder="Experience" type="number" />
+          <Form.Item label="Weight" name="weight">
+            <Input placeholder="Weight" type="number" />
           </Form.Item>
         </Col>
         <Col span={8} xs={24} sm={24} lg={8}>
-          <Form.Item
-            required
-            label="Fee Per Consultation"
-            name="feePerConsultation"
-            rules={[{ required: true }]}
-          >
-            <Input placeholder="Fee Per Consultation" type="number" />
+          <Form.Item label="Height" name="height">
+            <Input placeholder="Height" type="number" />
           </Form.Item>
         </Col>
         <Col span={8} xs={24} sm={24} lg={8}>
-          <Form.Item
-            required
-            label="Timings"
-            name="timings"
-            rules={[{ required: true }]}
-          >
-            <TimePicker.RangePicker format="HH:mm" />
+          <Form.Item label="Blood Pressure" name="bloodPressure">
+            <Input placeholder="Blood Pressure" />
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item label="Blood Group" name="bloodGroup" className="input">
+            <Select placeholder="Select Blood Group">
+              <Option value="A+">A+</Option>
+              <Option value="A-">A-</Option>
+              <Option value="B+">B+</Option>
+              <Option value="B-">B-</Option>
+              <Option value="AB+">AB+</Option>
+              <Option value="AB-">AB-</Option>
+              <Option value="O+">O+</Option>
+              <Option value="O-">O-</Option>
+            </Select>
           </Form.Item>
         </Col>
       </Row>
-
-      {/* Profile Picture Upload */}
-      {/* <Row gutter={20}>
+      <hr />
+      <Row gutter={20}>
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
-            required
-            label="Profile Picture"
-            name="profilePicture"
-            rules={[{ required: true }]}
+            label="Previous Medical Conditions"
+            name="previousMedicalConditions"
           >
-            <Upload
-              listType="picture"
-              maxCount={1}
-            >
-              <Button icon={<UploadOutlined />}>Upload (Max: 1)</Button>
-            </Upload>
+            <Input.TextArea
+              rows={4}
+              placeholder="Previous Medical Conditions"
+            />
           </Form.Item>
         </Col>
-      </Row> */}
-
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item label="Disabilities" name="disabilities">
+            <Input.TextArea rows={4} placeholder="Disabilities" />
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item label="Surgeries" name="surgeries">
+            <Input.TextArea rows={4} placeholder="Surgeries" />
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item label="Allergies" name="allergies">
+            <Input.TextArea rows={4} placeholder="Allergies" />
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item label="Current Medications" name="currentMedications">
+            <Input.TextArea rows={4} placeholder="Current Medications" />
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item label="Prescription" name="prescription">
+            <Input.TextArea rows={4} placeholder="Prescription" />
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item
+            label="Any Other Medical History"
+            name="otherMedicalHistory"
+          >
+            <Input.TextArea rows={4} placeholder="Any Other Medical History" />
+          </Form.Item>
+        </Col>
+      </Row>
+      <hr />
+      <Row gutter={20}>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item label="Test Result Name" name="testResultName">
+            <Input placeholder="Test Result Name" />
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item label="Positive/Negative" name="testResultStatus">
+            <Select placeholder="Select">
+              <Select.Option value="positive">Positive</Select.Option>
+              <Select.Option value="negative">Negative</Select.Option>
+            </Select>
+          </Form.Item>
+        </Col>
+        <Col span={8} xs={24} sm={24} lg={8}>
+          <Form.Item label="Write About Test" name="testDescription">
+            <Input.TextArea rows={4} placeholder="Write about the test" />
+          </Form.Item>
+        </Col>
+      </Row>
       <div className="d-flex justify-content-end">
         <Button className="primary-button" htmlType="submit">
           Submit
