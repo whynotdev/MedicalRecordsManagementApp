@@ -4,12 +4,19 @@ import Layout from "../../components/Layout";
 import { showLoading, hideLoading } from "../../redux/alertsSlice";
 import { toast } from "react-hot-toast";
 import axios from "axios";
-import { Table } from "antd";
+import { Button, Table } from "antd";
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
 
 function DoctorAppointments() {
   const [appointments, setAppointments] = useState([]);
   const dispatch = useDispatch();
+  const nav = useNavigate();
+
+  const createPatientRecord = (patientId) => {
+    console.log("Creating patient record for ID:", patientId);
+    nav(`/patients/record/${patientId}`);
+  };
   const getAppointmentsData = async () => {
     try {
       dispatch(showLoading());
@@ -35,7 +42,7 @@ function DoctorAppointments() {
       dispatch(showLoading());
       const response = await axios.post(
         "/api/doctor/change-appointment-status",
-        { appointmentId : record._id, status: status },
+        { appointmentId: record._id, status: status },
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -52,6 +59,7 @@ function DoctorAppointments() {
       dispatch(hideLoading());
     }
   };
+
   const columns = [
     {
       title: "Id",
@@ -104,6 +112,15 @@ function DoctorAppointments() {
           )}
         </div>
       ),
+    },
+    {
+      title: "Create Record",
+      render: (text, record) =>
+        record.status === "approved" ? (
+          <Button onClick={() => createPatientRecord(record._id)}>
+            Create Record
+          </Button>
+        ) : null,
     },
   ];
   useEffect(() => {

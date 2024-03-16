@@ -1,7 +1,7 @@
 import { Button, Col, Form, Input, Row, TimePicker, Upload } from "antd";
 import moment from "moment";
 import React from "react";
-import { UploadOutlined } from "@ant-design/icons";
+// import { UploadOutlined } from "@ant-design/icons";
 
 function PatientsForm({ onFinish, initialValues }) {
   return (
@@ -60,10 +60,6 @@ function PatientsForm({ onFinish, initialValues }) {
             <Input placeholder="Address" />
           </Form.Item>
         </Col>
-      </Row>
-
-      {/* Gender */}
-      {/* <Row gutter={20}>
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
             required
@@ -74,10 +70,6 @@ function PatientsForm({ onFinish, initialValues }) {
             <Input placeholder="Gender" />
           </Form.Item>
         </Col>
-      </Row> */}
-
-      {/* Age */}
-      {/* <Row gutter={20}>
         <Col span={8} xs={24} sm={24} lg={8}>
           <Form.Item
             required
@@ -88,8 +80,7 @@ function PatientsForm({ onFinish, initialValues }) {
             <Input placeholder="Age" type="number" />
           </Form.Item>
         </Col>
-      </Row> */}
-
+      </Row>
       {/* Patient Appointment ID */}
       {/* <Row gutter={20}>
         <Col span={8} xs={24} sm={24} lg={8}>

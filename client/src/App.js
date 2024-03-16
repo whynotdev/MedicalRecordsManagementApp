@@ -10,7 +10,6 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
 import ApplyDoctor from "./pages/ApplyDoctor";
 import Notifications from "./pages/Notifications";
-
 import DoctorsList from "./pages/Admin/DoctorsList";
 import Profile from "./pages/Doctor/Profile";
 import BookAppointment from "./pages/BookAppointment";
@@ -160,7 +159,7 @@ function App() {
           }
         />
         <Route
-          path="/patients/record"
+          path="/patients/record/:patientId"
           element={
             <ProtectedRoute>
               <PatientsRecord />
