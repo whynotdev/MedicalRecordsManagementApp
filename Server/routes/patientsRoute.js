@@ -6,8 +6,19 @@ const authMiddleware = require("../middlewares/authMiddleware");
 // POST request to create a new patient record
 router.post("/create-patient-record", authMiddleware, async (req, res) => {
   try {
-    const newPatientRecord = new PatientRecord(req.body);
+    // Extract userId and doctorId from the request body
+    const { userId, doctorId, ...patientData } = req.body;
+
+    // Create a new patient record object with userId and doctorId
+    const newPatientRecord = new PatientRecord({
+      userId,
+      doctorId,
+      ...patientData,
+    });
+
+    // Save the new patient record to the database
     await newPatientRecord.save();
+
     res.status(201).json({
       success: true,
       message: "Patient record created successfully",

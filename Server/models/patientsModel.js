@@ -43,6 +43,14 @@ const patientRecordSchema = new mongoose.Schema({
   testResultName: String,
   testResultStatus: String,
   testDescription: String,
+  userId: {
+    type: String,
+    required: true,
+  },
+  doctorId: {
+    type: String,
+    required: true,
+  },
 });
 
 const PatientModel = mongoose.model("patients", patientRecordSchema);

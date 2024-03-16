@@ -13,10 +13,12 @@ function DoctorAppointments() {
   const dispatch = useDispatch();
   const nav = useNavigate();
 
-  const createPatientRecord = (patientId) => {
-    console.log("Creating patient record for ID:", patientId);
-    nav(`/patients/record/${patientId}`);
+  const createPatientRecord = (userId, doctorId) => {
+    // console.log("Creating patient record for userID:", userId);
+    // console.log("Doctor ID:", doctorId);
+    nav(`/patients/record/${userId}/${doctorId}`);
   };
+
   const getAppointmentsData = async () => {
     try {
       dispatch(showLoading());
@@ -51,6 +53,7 @@ function DoctorAppointments() {
       );
       dispatch(hideLoading());
       if (response.data.success) {
+        // console.log(response.data);
         toast.success(response.data.message);
         getAppointmentsData();
       }
@@ -117,7 +120,9 @@ function DoctorAppointments() {
       title: "Create Record",
       render: (text, record) =>
         record.status === "approved" ? (
-          <Button onClick={() => createPatientRecord(record._id)}>
+          <Button
+            onClick={() => createPatientRecord(record.userId, record.doctorId)}
+          >
             Create Record
           </Button>
         ) : null,

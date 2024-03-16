@@ -4,18 +4,34 @@ import Layout from "../../components/Layout";
 import PatientsForm from "../../components/PatientsRecordForm";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const PatientsRecord = () => {
+  const { userId, doctorId } = useParams();
+  // console.log(userId, doctorId);
+  const navigate = useNavigate();
   const onFinish = async (values) => {
     try {
-      const response = await axios.post("/api/patient/create-patient-record", values, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      // console.log("userId:", userId);
+      // console.log("doctorId:", doctorId);
+      const data = {
+        ...values,
+        userId: userId,
+        doctorId: doctorId,
+      };
+      const response = await axios.post(
+        "/api/patient/create-patient-record",
+        data,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
       if (response.data.success) {
         toast.success("Patient record created successfully");
-        // Handle success as needed
+        navigate("/");
       } else {
         toast.error("Failed to create patient record");
       }
