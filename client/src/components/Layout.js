@@ -49,11 +49,11 @@ function Layout({ children }) {
       path: "/doctor/appointments",
       icon: "ri-file-list-line",
     },
-    {
-      name: "Patients",
-      path: "/patients/record",
-      icon: "ri-user-line",
-    },
+    // {
+    //   name: "Records",
+    //   path: "/p/records",
+    //   icon: "ri-user-line",
+    // },
     {
       name: "Profile",
       path: `/doctor/profile/${user?._id}`,

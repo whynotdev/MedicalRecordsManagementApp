@@ -7,6 +7,7 @@ const userRoute = require("./routes/userRoute");
 const adminRoute = require("./routes/adminRoute");
 const doctorRoute = require("./routes/doctorsRoute");
 const patientsRoute = require("./routes/patientsRoute");
+const messageRoute = require("./routes/messageRoute");
 const path = require("path");
 // const PatientModel = require("./models/patientsModel");
 
@@ -14,6 +15,7 @@ app.use("/api/user", userRoute);
 app.use("/api/admin", adminRoute);
 app.use("/api/doctor", doctorRoute);
 app.use("/api/patient", patientsRoute);
+app.use("/api/message", patientsRoute);
 // http:\\localhost:5000/api/patient/create-patient-record
 
 if (process.env.NODE_ENV === "production") {
