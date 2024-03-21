@@ -20,6 +20,7 @@ import HealthTracking from "./pages/Patient/HealthTracker";
 import PatientManageRecord from "./pages/Patient/PatientManageRecord";
 import Landingpage from "./pages/Landingpage";
 import { ContactPage } from "./pages/ContactPage";
+import AllPatients from "./pages/Doctor/AllPatients";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -162,6 +163,14 @@ function App() {
           element={
             <ProtectedRoute>
               <PatientsRecord />
+            </ProtectedRoute>
+          }
+        />
+         <Route
+          path="/allPatients"
+          element={
+            <ProtectedRoute>
+              <AllPatients/>
             </ProtectedRoute>
           }
         />
