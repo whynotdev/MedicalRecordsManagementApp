@@ -33,9 +33,9 @@ router.post("/create-patient-record", authMiddleware, async (req, res) => {
 //get patients record
 router.get("/patients", authMiddleware, async (req, res) => {
   try {
-    const doctorId = req.query.doctorId;
+    const userId = req.query.doctorId;
 
-    const patientRecords = await PatientRecord.find({ doctorId });
+    const patientRecords = await PatientRecord.find({ userId });
     res.status(200).json({
       success: true,
       message: "Patient records retrieved successfully",

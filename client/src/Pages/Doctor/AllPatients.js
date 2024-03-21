@@ -1,8 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
-
+import { useDispatch, useSelector } from "react-redux";
+import { showLoading, hideLoading } from "../../redux/alertsSlice";
+import { useNavigate, useParams } from "react-router-dom";
+import moment from "moment";
 function AllPatients() {
+  const { user } = useSelector((state) => state.user);
+  const params = useParams();
+  const dispatch = useDispatch();
   const [patients, setPatients] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -10,18 +16,20 @@ function AllPatients() {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-     
-        const doctorId = "65eed1973b5b2d9076fb7741";
-
+        const doctorId = user?._id;
+        // console.log("gaaaaaaa", doctorId);
+        //  "65eed1973b5b2d9076fb7741";
+        dispatch(showLoading());
         const response = await axios.get(
           `/api/patient/patients?doctorId=${doctorId}`,
+
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           }
         );
-
+        dispatch(hideLoading());
         if (response.data.success) {
           setPatients(response.data.data);
         } else {
@@ -30,6 +38,7 @@ function AllPatients() {
           );
         }
       } catch (error) {
+        dispatch(hideLoading());
         console.error("Error fetching patients:", error.message);
         setError(error.message || "Failed to fetch patient data");
       } finally {
