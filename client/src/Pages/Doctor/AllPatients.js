@@ -10,7 +10,7 @@ function AllPatients() {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        // Replace 'your_doctor_id_here' with the actual doctorId
+     
         const doctorId = "65eed1973b5b2d9076fb7741";
 
         const response = await axios.get(

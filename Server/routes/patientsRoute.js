@@ -30,18 +30,12 @@ router.post("/create-patient-record", authMiddleware, async (req, res) => {
   }
 });
 
-// Add more routes for retrieving, updating, or deleting patient records if needed
-
 //get patients record
 router.get("/patients", authMiddleware, async (req, res) => {
   try {
-    // Extract the doctorId from the request query parameters
     const doctorId = req.query.doctorId;
 
-    // Find all patient records where doctorId matches the provided doctorId
     const patientRecords = await PatientRecord.find({ doctorId });
-
-    // Send the patient records as a response
     res.status(200).json({
       success: true,
       message: "Patient records retrieved successfully",
