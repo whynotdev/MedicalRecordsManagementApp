@@ -3,12 +3,10 @@ import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../../redux/alertsSlice";
-import { useNavigate, useParams } from "react-router-dom";
 import { FaUser, FaPhone, FaMapMarker, FaWeight, FaArrowUp, FaNotesMedical, FaHeartbeat, FaMedkit, FaBriefcaseMedical, FaAllergies, FaFileMedicalAlt, FaHospitalUser } from 'react-icons/fa';
 
 function AllPatients() {
   const { user } = useSelector((state) => state.user);
-  const params = useParams();
   const dispatch = useDispatch();
   const [patients, setPatients] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -62,41 +60,41 @@ function AllPatients() {
                 <div className="card-body">
                   <h2 className="card-title"><FaUser /> {`${patient.firstName} ${patient.lastName}`}</h2>
                   <hr />
-                  <div className="icon-text">
-                    <FaPhone /><span className="ml-2">{patient.phoneNumber}</span>
+                  <div className="icon-text mb-2 mb-2">
+                    <FaPhone  className="text-success"/><span className="p-2">{patient.phoneNumber}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaMapMarker /><span className="ml-2">{patient.address}</span>
+                  <div className="icon-text mb-2 mb-2">
+                    <FaMapMarker  /><span className="p-2">{patient.address}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaWeight /><span className="ml-2">Weight: {patient.weight}</span>
+                  <div className="icon-text mb-2">
+                    <FaWeight /><span className="p-2">Weight: {patient.weight}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaArrowUp /><span className="ml-2">Height: {patient.height}</span>
+                  <div className="icon-text mb-2">
+                    <FaArrowUp /><span className="p-2">Height: {patient.height}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaNotesMedical /><span className="ml-2">Medical Conditions: {patient.previousMedicalConditions}</span>
+                  <div className="icon-text mb-2">
+                    <FaNotesMedical /><span className="p-2">Medical Conditions: {patient.previousMedicalConditions}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaHeartbeat /><span className="ml-2">Blood Pressure: {patient.bloodPressure}</span>
+                  <div className="icon-text mb-2">
+                    <FaHeartbeat /><span className="p-2">Blood Pressure: {patient.bloodPressure}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaMedkit /><span className="ml-2">Blood Group: {patient.bloodGroup}</span>
+                  <div className="icon-text mb-2">
+                    <FaMedkit /><span className="p-2">Blood Group: {patient.bloodGroup}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaBriefcaseMedical /><span className="ml-2">Surgeries: {patient.surgeries}</span>
+                  <div className="icon-text mb-2">
+                    <FaBriefcaseMedical /><span className="p-2">Surgeries: {patient.surgeries}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaAllergies /><span className="ml-2">Allergies: {patient.allergies}</span>
+                  <div className="icon-text mb-2">
+                    <FaAllergies /><span className="p-2">Allergies: {patient.allergies}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaFileMedicalAlt /><span className="ml-2">Current Medications: {patient.currentMedications}</span>
+                  <div className="icon-text mb-2">
+                    <FaFileMedicalAlt /><span className="p-2">Current Medications: {patient.currentMedications}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaHospitalUser /><span className="ml-2">Prescription: {patient.prescription}</span>
+                  <div className="icon-text mb-2">
+                    <FaHospitalUser /><span className="p-2">Prescription: {patient.prescription}</span>
                   </div>
-                  <div className="icon-text">
-                    <FaNotesMedical /><span className="ml-2">Other Medical History: {patient.otherMedicalHistory}</span>
+                  <div className="icon-text mb-2">
+                    <FaNotesMedical /><span className="p-2">Other Medical History: {patient.otherMedicalHistory}</span>
                   </div>
                 </div>
               </div>
